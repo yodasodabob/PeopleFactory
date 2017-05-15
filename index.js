@@ -27,8 +27,6 @@ const handleSubmit = (ev) => {
     const types = document.getElementsByTagName("input")
     const unList = document.createElement("ul")
     for (i = 0; i < form.length - 1; i++) {
-        console.log(form[i])
-        console.log(form[i].value)
         let li = document.createElement("li")
         if (types[i].type == 'color') {
             let colorDiv = document.createElement("div")
