@@ -23,20 +23,22 @@ const handleSubmit = (ev) => {
     //         <li>Birthplace: ${birthplace}</li>
     //     </u1>`
 
+    const labels = document.getElementsByTagName('label')
     const unList = document.createElement("ul")
-    // getElementsByTagName
     for (i = 0; i < form.length - 1; i++) {
         console.log(form[i])
         console.log(form[i].value)
-        if (form[i][0] == '#') {
-            var colorDiv = document.createElement("div")
-            colorDiv.style = "height: 50px; width: 100px; background-color: ${form[i].value}"
-            unList.appendChild(colorDiv)
+        var li = document.createElement("li")
+        if (form[i].value[0] == '#') {
+            // var colorDiv = document.createElement("div")
+            // colorDiv.style = `"height: 50px; width: 100px; background-color: ${form[i].value}"`
+            var colorDiv = `<div style="height: 50px; width: 100px; background-color: ${form[i].value}"></div>`
+            li.innerHTML = labels[i].innerText + ': ' + colorDiv
+            // unList.appendChild(colorDiv)
         } else {
-            var li = document.createElement("li")
-            li.textContent = form[i].value
-            unList.appendChild(li)
+            li.textContent =labels[i].innerHTML + ": " + form[i].value
         }
+        unList.appendChild(li)
     }
     details.appendChild(unList)
     }
