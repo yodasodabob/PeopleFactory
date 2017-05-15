@@ -31,11 +31,12 @@ const handleSubmit = (ev) => {
         console.log(form[i].value)
         var li = document.createElement("li")
         if (types[i].type == 'color') {
-            // var colorDiv = document.createElement("div")
-            // colorDiv.style = `"height: 50px; width: 100px; background-color: ${form[i].value}"`
-            var colorDiv = `<div style="display:inline-block;height: 50px; width: 100px; background-color: ${form[i].value}"></div>`
-            li.innerHTML = labels[i].innerText + ': ' + colorDiv
-            // unList.appendChild(colorDiv)
+            var colorDiv = document.createElement("div")
+            colorDiv.style = `display=inLine-block;height: 50px; width: 100px; background-color: ${form[i].value}`
+            // var colorDiv = `<div style="display:inline-block;height: 50px; width: 100px; background-color: ${form[i].value}"></div>`
+            // li.innerHTML = labels[i].innerText + ': ' + colorDiv
+            li.textContent = `${labels[i].innerText}:`
+            li.appendChild(colorDiv)
         } else {
             li.textContent =labels[i].innerHTML + ": " + form[i].value
         }
