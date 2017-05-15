@@ -7,7 +7,7 @@ personForm.onsubmit = (ev) => {
 
     const personName = form.personName.value
 
-    // details.innerHTML = '<em>$[personName]</em>'
+    // details.innerHTML = `<em>$[personName]</em>`
     
     const em = document.createElement('em')
     em.textContent = personName
