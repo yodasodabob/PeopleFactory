@@ -29,9 +29,9 @@ const handleSubmit = (ev) => {
     for (i = 0; i < form.length - 1; i++) {
         console.log(form[i])
         console.log(form[i].value)
-        var li = document.createElement("li")
+        let li = document.createElement("li")
         if (types[i].type == 'color') {
-            var colorDiv = document.createElement("div")
+            let colorDiv = document.createElement("div")
             colorDiv.style = `display=inLine-block;height: 50px; width: 100px; background-color: ${form[i].value}`
             // var colorDiv = `<div style="display:inline-block;height: 50px; width: 100px; background-color: ${form[i].value}"></div>`
             // li.innerHTML = labels[i].innerText + ': ' + colorDiv
