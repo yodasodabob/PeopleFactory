@@ -1,6 +1,6 @@
 const personForm = document.querySelector('form')
 
-personForm.onsubmit = (ev) => {
+const handleSubmit = (ev) => {
     ev.preventDefault()
     const form = ev.target
     const details = document.querySelector('.details')
@@ -9,6 +9,9 @@ personForm.onsubmit = (ev) => {
     const hairColor = form.hairColor.value
     const birthplace = form.birthplace.value
     const age = form.age.value
+
+    const colorDiv = `
+    `
 
     details.innerHTML = `<em> ${personName} </em>`
     details.innerHTML = `
@@ -22,3 +25,5 @@ personForm.onsubmit = (ev) => {
     em.textContent = personName
     details.appendChild(em)
 }
+
+personForm.addEventListender('submit', handleSubmit)
