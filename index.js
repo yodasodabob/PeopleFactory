@@ -22,12 +22,19 @@ const handleSubmit = (ev) => {
     //         <li>Age: ${age}</li>
     //         <li>Birthplace: ${birthplace}</li>
     //     </u1>`
-        
-    for (var area in form){
-        const em = document.createElement("em")
-        em.textContent() = area.value
-        details.appendChild(em)
+
+    const unList = document.createElement("ul")
+    // getElementsByTagName
+    for (i = 0; i < form.length - 1; i++) {
+        console.log(form[i])
+        console.log(form[i].value)
+        var li = document.createElement("li")
+        li.textContent = form[i].value
+        unList.appendChild(li)
     }
+    details.appendChild(unList)
     }
+
+
 
 personForm.addEventListener('submit', handleSubmit)
