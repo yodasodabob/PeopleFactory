@@ -1,5 +1,10 @@
 const personForm = document.querySelector('form')
 
+const renderColor = (hairColor) => {
+    const colorDiv = `display=inLine-block;height: 50px; width: 100px; background-color: ${hairColor}`
+    return colorDiv
+}
+
 const handleSubmit = (ev) => {
     ev.preventDefault()
     const form = ev.target
