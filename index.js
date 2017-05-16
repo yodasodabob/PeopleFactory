@@ -5,24 +5,6 @@ const handleSubmit = (ev) => {
     const form = ev.target
     const details = document.querySelector('.details')
 
-    // const personName = form.personName.value
-    // const hairColor = form.hairColor.value
-    // const birthplace = form.birthplace.value
-    // const age = form.age.value
-
-    // const colorDiv = `
-    //     <div style="height: 50px; width: 100px; background-color: ${hairColor}"></div>`
-    
-
-    // details.innerHTML = `<em> ${personName} </em>`
-    // details.innerHTML = `
-    //     <ul>
-    //         <li>Name: ${personName}</li>
-    //         <li>Hair Color: ${colorDiv}</li>
-    //         <li>Age: ${age}</li>
-    //         <li>Birthplace: ${birthplace}</li>
-    //     </u1>`
-
     const labels = document.getElementsByTagName('label')
     const types = document.getElementsByTagName("input")
     const unList = document.createElement("ul")
@@ -31,8 +13,7 @@ const handleSubmit = (ev) => {
         if (types[i].type == 'color') {
             let colorDiv = document.createElement("div")
             colorDiv.style = `display=inLine-block;height: 50px; width: 100px; background-color: ${form[i].value}`
-            // var colorDiv = `<div style="display:inline-block;height: 50px; width: 100px; background-color: ${form[i].value}"></div>`
-            // li.innerHTML = labels[i].innerText + ': ' + colorDiv
+           
             li.textContent = `${labels[i].innerText}:`
             li.appendChild(colorDiv)
         } else {
