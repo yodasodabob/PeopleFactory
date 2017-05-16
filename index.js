@@ -1,7 +1,10 @@
 const personForm = document.querySelector('form')
 
 const renderColor = (hairColor) => {
-    const colorDiv = `display=inLine-block;height: 50px; width: 100px; background-color: ${hairColor}`
+    const colorDiv = document.createElement('div')
+    colorDiv.style.height = '50px'
+    colorDiv.style.width = '100px'
+    colorDiv.style.backgroundColor = hairColor
     return colorDiv
 }
 
