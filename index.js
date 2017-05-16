@@ -8,10 +8,33 @@ const renderColor = (hairColor) => {
     return colorDiv
 }
 
+const renderListItem = (name, value) => {
+    const li = document.createElement('li')
+    li.textContent = `${name}: ${value}`
+    return li
+}
+
+const renderList = (person) => {
+    const list = document.createElement('ul')
+    for(let i = 0; i < Object.keys(person).length; i++) {
+        let li = renderListItem(Object.keys(person)[i], person[Object.keys(person)[i]])
+        list.appendChild(li)
+    }
+    return list
+}
+
 const handleSubmit = (ev) => {
     ev.preventDefault()
     const form = ev.target
     const details = document.querySelector('.details')
+
+const person = {
+    name: form.personName.value,
+    hairColor: form.hairColor.value,
+    age = form.age.value,
+    birthplace: form.birthplace.value,
+}
+
     const labels = document.getElementsByTagName('label')
     const types = document.getElementsByTagName("input")
     const unList = document.createElement("ul")
