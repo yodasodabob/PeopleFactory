@@ -16,10 +16,10 @@ const renderListItem = (name, value) => {
 
 const renderList = (person) => {
     const list = document.createElement('ul')
-    for(let i = 0; i < Object.keys(person).length; i++) {
-        let li = renderListItem(Object.keys(person)[i], person[Object.keys(person)[i]])
+    Object.keys(person).map((fieldname, i, keys) => {
+        let li = renderLIstitem(fieldName, person[fieldName])
         list.appendChild(li)
-    }
+    })
     return list
 }
 
